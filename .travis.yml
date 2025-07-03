@@ -4,7 +4,7 @@ dist: focal
 
 vm:
   create:
-    name: test-charge-i1
+    name: test-charge-i2
 
 script:
   - echo "Creating custom file"
