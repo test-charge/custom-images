@@ -1,13 +1,20 @@
-language: generic
-jobs:
-  include:
-    - stage: use image
-      vm:
-        use: 
-          name: test-charge-i3
+# language: generic
+# jobs:
+#   include:
+#     - stage: use image
+#       vm:
+#         use: 
+#           name: test-charge-i3
 
-    - stage: use gpu-xlarge
-      vm:
-        use: 
-          name: test-charge-i3
-        size: gpu-xlarge
+#     - stage: use gpu-xlarge
+#       vm:
+#         use: 
+#           name: test-charge-i3
+#         size: gpu-xlarge
+os: linux
+language: generic
+dist: focal
+
+vm:
+  create:
+    name: test-charge-i4
