@@ -1,13 +1,12 @@
-os: linux
-language: generic
-dist: focal
+jobs:
+  include:
+    - stage: use image
+      vm:
+        use: 
+          name: test-charge-i3
 
-vm:
-  create:
-    name: test-charge-i3
-
-script:
-  - echo "Creating custom file"
-  - sudo mkdir /my-custom-dir
-  - echo "Test custom image!" | sudo tee /my-custom-dir/my_custom_file.txt
-  - sudo cat /my-custom-dir/my_custom_file.txt
+    - stage: use gpu-xlarge
+      vm:
+        use: 
+          name: test-charge-i3
+        size: gpu-xlarge
